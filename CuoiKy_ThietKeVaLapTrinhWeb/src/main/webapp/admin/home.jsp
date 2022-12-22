@@ -43,6 +43,43 @@ a.button.addClub{
 					</div>
 				</a>
 			</div>
+			
+			<div class="col-md-3">
+				<a href="all_clubs.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<br>
+							<h4>All CLUBS</h4>
+							-------------
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-md-3">
+				<a href="add_players.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<br>
+							<h4>Add Player</h4>
+							-------------
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="col-md-3">
+				<a href="all_players.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<br>
+							<h4>All Player</h4>
+							-------------
+						</div>
+					</div>
+				</a>
+			</div>
+			
 
 			
 			
