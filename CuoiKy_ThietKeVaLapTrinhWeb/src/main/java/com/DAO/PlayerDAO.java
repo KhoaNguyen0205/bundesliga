@@ -14,5 +14,7 @@ public interface PlayerDAO {
 	public boolean updatePlayer (PlayerDtls b);
 	
 	public PlayerDtls getPlayerById(int id);
+	
+	public boolean deletePlayer (int id);
 
 }

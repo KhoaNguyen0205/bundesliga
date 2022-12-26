@@ -32,31 +32,37 @@ ClubDtls b = dao.getClubById(id);
            <h4>
               Match rate: Win: <%=b.getW()%> / Draw: <%=b.getD()%> / Lose: <%=b.getL()%>
            </h4>
-           
-           <h4>
-            
-           </h4>
-         </div>
+
+				<h4>
+					<div class="col-md-6">
+						<form class="form-inline my-2 my-lg-0" action="searchmatch.jsp"
+							method="post">
+							All Matches: <select type="search" name="ch">
+								<option><%=b.getName()%></option> 
+							</select><button class=" my-2 my-sm-0" type="submit">View</button>
+							
+						</form>
+					</div>
+				</h4>
+				
+				<h4>
+					<div>
+						<form class="form-inline my-2 my-lg-0" action="search.jsp"
+							method="post">
+							Players: <select type="search" name="ch">
+								<option><%=b.getName()%></option>
+							</select>
+							<button class=" my-2 my-sm-0" type="submit">View</button>
+						</form>
+					</div>
+				</h4>
+			</div>
      </div>
   </div>
   
 	
-  <div class="col-md-6">
-			<form class="form-inline my-2 my-lg-0" action="searchmatch.jsp" method="post">
-				All Matches: <select type="search" name="ch">
-				<option><%=b.getName()%></option>
-				</select>
-				<button class=" my-2 my-sm-0" type="submit">View</button>
-			</form>
- </div>
- <div>
-			<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
-				Players: <select type="search" name="ch">
-				<option><%=b.getName()%></option>
-				</select>
-				<button class=" my-2 my-sm-0" type="submit">View</button>
-			</form>
-</div>
+ 
+ 
   
 </body>
 </html>

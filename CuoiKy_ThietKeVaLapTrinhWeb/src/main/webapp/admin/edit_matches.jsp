@@ -42,9 +42,19 @@
 
 				<th scope="col"><%=b.getRound() %></th>
 
-				<th><%=b.getTime() %></th>
+				<th>
+				    <div class="form-gruop">
+						<input style="height: 50px; width: 200px;" name="time"
+							type="datetime-local" min="0" class="form-control" value="<%=b.getTime()%>">
+					</div>
+				</th>
 
-				<th><%=b.getTeam1() %></th>
+				<th>
+				    <div class="form-gruop">
+						<input style="height: 50px; width: 200px;" name="team1"
+							type="text" min="0" class="form-control" value="<%=b.getTeam1()%>">
+					</div>
+				</th>
 
 				<th>
 					<div class="form-gruop">
@@ -60,7 +70,12 @@
 					</div>
 				</th>
 
-				<th><%=b.getTeam2() %></th>
+				<th>
+				     <div class="form-gruop">
+						<input style="height: 50px; width: 200px;" name="team2"
+							type="text" min="0" class="form-control" value="<%=b.getTeam2()%>">
+					</div>
+				</th>
 
 				<th>
 					<button type="submit" class=" form-control mr-sm-2">ADD</button>

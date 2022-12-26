@@ -21,17 +21,21 @@ public class EditMatchesServlet extends HttpServlet{
 		try {
 			int id = Integer.parseInt(req.getParameter("id"));
 			
-		
+		    String time = req.getParameter("time");
+		    String team1 = req.getParameter("team1");
 			String score1 = req.getParameter("score1");
 			String score2 = req.getParameter("score2");
-			
+			String team2 = req.getParameter("team2");
 			
 			
 					
 			MatchesDtls b = new MatchesDtls();
 			b.setIdmatches(id);
+			b.setTime(time);
+			b.setTeam1(team1);
 			b.setScore1(score1);
 			b.setScore2(score2);
+			b.setTeam2(team2);
 			
 		
 			MatchesDAOImpl dao = new MatchesDAOImpl(DBConnect.getConn());	

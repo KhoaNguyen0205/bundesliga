@@ -18,7 +18,7 @@
 <body>
 	<%
 	User u = (User) session.getAttribute("userobj");
-	%>
+	%>	
 	<%@include file="all_component/navbar2.jsp"%>
 	
 	<%@include file="all_component/slider.jsp" %>

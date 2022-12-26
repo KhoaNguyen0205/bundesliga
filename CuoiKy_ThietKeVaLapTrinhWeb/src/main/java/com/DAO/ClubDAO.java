@@ -14,4 +14,6 @@ public interface ClubDAO {
   public boolean updateClubs(ClubDtls b);
   
   public List<ClubDtls> getTable();
+  
+  public boolean deleteClub (int id);
 }
