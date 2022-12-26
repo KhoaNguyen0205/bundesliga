@@ -133,7 +133,7 @@ public class ClubDAOImpl implements ClubDAO{
 		ClubDtls b = null;
 		
 		try {
-			String sql ="SELECT * FROM club_dtls  order by p Desc";
+			String sql ="select * from club_dtls order by p desc, nuof desc";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
 			

@@ -10,5 +10,9 @@ public interface PlayerDAO {
 	public List<PlayerDtls> getAllPlayers();
 	
 	public List<PlayerDtls> getPlayerBySearch (String ch);
+	
+	public boolean updatePlayer (PlayerDtls b);
+	
+	public PlayerDtls getPlayerById(int id);
 
 }

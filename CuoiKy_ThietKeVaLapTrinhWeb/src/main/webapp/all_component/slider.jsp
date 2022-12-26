@@ -1,3 +1,7 @@
+<%@page import="com.entity.ClubDtls"%>
+<%@page import="java.util.List"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.ClubDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -163,21 +167,22 @@ h2{
 <div class="container">
   <h4 style="text-align: left;"><b>CLUBS</b></h4>
    <section class="customer-logos slider">
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000G.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000017.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000007.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000003.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000F.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000B.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000G.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000017.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000007.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-000003.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000F.svg"></div>
-      <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000B.svg"></div>
-     
-     
-   </section>
+   <div class="slide"><img src="https://www.bundesliga.com/assets/clublogo/DFL-CLU-00000G.svg"></div>
+
+			<%
+			ClubDAOImpl dao = new ClubDAOImpl(DBConnect.getConn());
+			List<ClubDtls> list = dao.getAllClubs();
+			for (ClubDtls b : list) {
+			%>
+			<div class="slide">
+				<img
+					src="AllClubs/<%=b.getLogo()%>">
+			</div>
+			<%
+			}
+			%>
+
+		</section>
 </div>
 </body>
 </html>

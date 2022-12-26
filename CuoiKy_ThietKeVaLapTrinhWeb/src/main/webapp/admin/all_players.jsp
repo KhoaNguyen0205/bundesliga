@@ -64,6 +64,10 @@
 				<td><%=b.getClub()%></td>
 				<td><%=b.getPositon()%></td>
 				
+					<td><a href="edit_player.jsp?id=<%=b.getId()%>"
+					class=" form-control mr-sm-2"><i class="fa-solid fa-pen-to-square"></i> Edit</a> <a
+					href="../delete?id=<%=b.getId()%>"
+					class=" form-control mr-sm-2"><i class="fa-solid fa-trash"></i> Delete</a></td>	
 			  <%	  
 			  }
 			  %>

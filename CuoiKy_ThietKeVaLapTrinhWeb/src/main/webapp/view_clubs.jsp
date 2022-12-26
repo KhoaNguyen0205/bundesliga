@@ -13,7 +13,9 @@
 </head>
 <body>
 <%@include file="all_component/navbar2.jsp"%>
-   
+   <c:if test="${empty userobj}">
+		<c:redirect url="login.jsp" />
+	</c:if>
 <%
 int id =Integer.parseInt(request.getParameter("id"));
 ClubDAOImpl dao = new ClubDAOImpl(DBConnect.getConn());
@@ -23,11 +25,38 @@ ClubDtls b = dao.getClubById(id);
      <div class="row">
          <div class="col-md-6 text-center p-5 border bg-white">
            <img src="AllClubs/<%=b.getLogo()%>" style="height: 100px; width: 100px"><br>
+           <h4 class="mt-3" style="color: ">
+               Club Name: <span class="test-success"><%=b.getName()%></span>
+           </h4>
+           
            <h4>
-               Club Name: <span class="test-success"><%=b.getName()%>></span>
+              Match rate: Win: <%=b.getW()%> / Draw: <%=b.getD()%> / Lose: <%=b.getL()%>
+           </h4>
+           
+           <h4>
+            
            </h4>
          </div>
      </div>
   </div>
+  
+	
+  <div class="col-md-6">
+			<form class="form-inline my-2 my-lg-0" action="searchmatch.jsp" method="post">
+				All Matches: <select type="search" name="ch">
+				<option><%=b.getName()%></option>
+				</select>
+				<button class=" my-2 my-sm-0" type="submit">View</button>
+			</form>
+ </div>
+ <div>
+			<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
+				Players: <select type="search" name="ch">
+				<option><%=b.getName()%></option>
+				</select>
+				<button class=" my-2 my-sm-0" type="submit">View</button>
+			</form>
+</div>
+  
 </body>
 </html>

@@ -98,6 +98,54 @@ public class PlayerDAOImpl implements PlayerDAO{
 		}
 		return list;
 	}
+
+	@Override
+	public boolean updatePlayer(PlayerDtls b) {
+		boolean f = false;
+		try {
+			String sql = "update player_dtls set name=? , ns=?, club=? where pId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, b.getName());
+			ps.setString(2, b.getNs());
+			ps.setString(3, b.getClub());
+			ps.setInt(4, b.getId());
+			
+			int i = ps.executeUpdate();
+			if(i==1) {
+				f= true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();		
+		}
+		return f;
+	}
+
+	@Override
+	public PlayerDtls getPlayerById(int id) {
+		PlayerDtls b = null; 
+		
+		try {
+			String sql="select * from player_dtls where pId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				b = new PlayerDtls();
+				b.setId(rs.getInt(1));
+				b.setImage(rs.getString(2));
+				b.setName(rs.getString(3));
+				b.setNs(rs.getString(4));
+				b.setClub(rs.getString(5));
+				b.setPositon(rs.getString(6));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return b;
+	}
 	
 	
 	

@@ -14,5 +14,7 @@ public interface MatchesDAO {
 	
 	public boolean updateMatches (MatchesDtls b);
 	
+	public List<MatchesDtls> getMatchesBySearch (String ch);
+	
 
 }

@@ -118,6 +118,35 @@ public class MatchesDAOImpl implements MatchesDAO {
 		return f;
 	}
 
+	@Override
+	public List<MatchesDtls> getMatchesBySearch(String ch) {
+		List<MatchesDtls> list = new ArrayList<MatchesDtls>();
+		MatchesDtls b = null;
+		
+		try {
+			String sql ="select * from matches_dtls where team1 like ? or team2 like ? ";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "%"+ch+"%");
+			ps.setString(2, "%"+ch+"%");
+			
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				b = new MatchesDtls();
+				b.setIdmatches(rs.getInt(1));
+				b.setRound(rs.getString(2));
+				b.setTime(rs.getString(3));
+				b.setTeam1(rs.getString(4));
+				b.setScore1(rs.getString(5));
+				b.setScore2(rs.getString(6));
+				b.setTeam2(rs.getString(7));
+				list.add(b);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();		
+		}
+		return list;
+	}
+
 
 	
 	

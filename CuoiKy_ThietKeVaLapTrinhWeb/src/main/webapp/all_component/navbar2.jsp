@@ -147,7 +147,7 @@ top:
       <li><a href="allClub.jsp" data-item='CLUBS'>CLUBS</a></li>
       <li><a href="Players.jsp" data-item='Players'>Players</a></li>
       <li><a href="legends.jsp" data-item='Legends'>Legends</a></li>
-      <li><a href="legends.jsp" data-item='Legends'>Fixtures & Results</a></li>	
+      <li><a href="error.jsp" data-item='Legends'>Fixtures & Results</a></li>	
     </ul>
 
   </nav>

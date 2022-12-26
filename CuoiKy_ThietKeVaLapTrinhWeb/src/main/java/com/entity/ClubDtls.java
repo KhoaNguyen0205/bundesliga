@@ -139,7 +139,6 @@ public void setP(int p) {
 	this.p = p;
 }
 
-
 public String getNuof() {
 	return nuof;
 }
@@ -149,9 +148,10 @@ public void setNuof(String nuof) {
 @Override
 public String toString() {
 	return "ClubDtls [id=" + id + ", logo=" + logo + ", name=" + name + ", w=" + w + ", d=" + d + ", l=" + l
-			+ ", score=" + score + ", conceded=" + conceded + ", matches=" + matches + ", p=" + p + ", nuof="
-			+ nuof + "]";
+			+ ", score=" + score + ", conceded=" + conceded + ", matches=" + matches + ", p=" + p + ", nuof=" + nuof
+			+ "]";
 }
+	
 
 
 
