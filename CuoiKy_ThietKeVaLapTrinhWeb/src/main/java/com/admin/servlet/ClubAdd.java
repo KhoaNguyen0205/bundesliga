@@ -26,11 +26,11 @@ public class ClubAdd extends HttpServlet {
 			Part part = req.getPart("logo");
 			String fileName = part.getSubmittedFileName();
 			String name=req.getParameter("cname");
-			int w=req.getIntHeader("");
-			int d=req.getIntHeader("");
-			int l=req.getIntHeader("");
-			int score=req.getIntHeader("");
-			int conceded=req.getIntHeader("");
+			String w=req.getParameter("w");
+			String d=req.getParameter("d");
+			String l=req.getParameter("l");
+			String score=req.getParameter("score");
+			String conceded=req.getParameter("conceded");
 			
 			ClubDtls b = new ClubDtls(fileName, name,w,d,l,score,conceded);
 			

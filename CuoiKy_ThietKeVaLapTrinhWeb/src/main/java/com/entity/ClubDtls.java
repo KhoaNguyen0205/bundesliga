@@ -4,19 +4,20 @@ public class ClubDtls {
 private int id;	
 private String logo;
 private String name;
-private int w;
-private int d;
-private int l;
-private int score;
-private int conceded;
-
-
+private String w;
+private String d;
+private String l;
+private String score;
+private String conceded;
+private String matches;
+private int p;
+private String nuof;
 
 public ClubDtls() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public ClubDtls(String logo, String name, int w, int d, int l, int score, int conceded) {
+public ClubDtls(String logo, String name, String w, String d, String l, String score, String conceded) {
 	super();
 	this.logo = logo;
 	this.name = name;
@@ -65,71 +66,96 @@ public void setName(String name) {
 
 
 
-public int getW() {
+public String getW() {
 	return w;
 }
 
 
 
-public void setW(int w) {
+public void setW(String w) {
 	this.w = w;
 }
 
 
 
-public int getD() {
+public String getD() {
 	return d;
 }
 
 
 
-public void setD(int d) {
+public void setD(String d) {
 	this.d = d;
 }
 
 
 
-public int getL() {
+public String getL() {
 	return l;
 }
 
 
 
-public void setL(int l) {
+public void setL(String l) {
 	this.l = l;
 }
 
 
 
-public int getScore() {
+public String getScore() {
 	return score;
 }
 
 
 
-public void setScore(int score) {
+public void setScore(String score) {
 	this.score = score;
 }
 
 
 
-public int getConceded() {
+public String getConceded() {
 	return conceded;
 }
 
 
 
-public void setConceded(int conceded) {
+public void setConceded(String conceded) {
 	this.conceded = conceded;
 }
 
 
 
+public String getMatches() {
+	return matches;
+}
+public void setMatches(String matches) {
+	this.matches = matches;
+}
+public int getP() {
+	return p;
+}
+public void setP(int p) {
+	this.p = p;
+}
+
+
+public String getNuof() {
+	return nuof;
+}
+public void setNuof(String nuof) {
+	this.nuof = nuof;
+}
 @Override
 public String toString() {
 	return "ClubDtls [id=" + id + ", logo=" + logo + ", name=" + name + ", w=" + w + ", d=" + d + ", l=" + l
-			+ ", score=" + score + ", conceded=" + conceded + "]";
+			+ ", score=" + score + ", conceded=" + conceded + ", matches=" + matches + ", p=" + p + ", nuof="
+			+ nuof + "]";
 }
+
+
+
+
 
 
 

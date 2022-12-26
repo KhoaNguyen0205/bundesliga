@@ -1,3 +1,7 @@
+<%@page import="com.entity.ClubDtls"%>
+<%@page import="java.util.List"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.ClubDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -5,6 +9,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Bundesliga || Table</title>
+<script type="text/javascript">
+
+</script>
 <link rel="stylesheet" href="css1/style.css">
 <%@include file="all_component/allCss.jsp"%>
 </head>
@@ -17,42 +24,49 @@
 	<div class="container mt-5">
 		<table class="table table-light ">
 			<thead>
+			
 				<tr>
-					<th scope="col"></th>
-					<th  >Club</th>
+					<th scope="col">STT</th>
+					<th scope="col">Logo</th>
+					<th scope="col">Club</th>
 					<th scope="col">Matches</th>
-						<th scope="col">W</th>
+					<th scope="col">W</th>
 					<th scope="col">D</th>
 					<th scope="col">L</th>
-					<th scope="col">Goals</th>
+					<th scope="col">Score</th>
+					<th scope="col">Conceded</th>
 					<th scope="col">+/-</th>
 					<th scope="col">Points</th>
 				</tr>
+		
 			</thead>
+			<%
+			ClubDAOImpl dao =new ClubDAOImpl(DBConnect.getConn());
+			List<ClubDtls> list = dao.getTable();
+			for(ClubDtls b: list) {
+			%>
 			<tbody>
 				<tr>
-					<th scope="row">1</th>
-					<td scope="col">FC Bayern München</td>
-					<td scope="col">15</td>
-					<td scope="col">10</td> 
-					<td scope="col">4</td>
-					<td scope="col">1</td>
-					<td scope="col">49:13</td>
-					<td scope="col">+36</td>
-					<td>34</td>
+					<th scope="col">
+					
+					</th>  
+					<td scope="col">
+					    <img src="AllClubs/<%=b.getLogo()%>"
+					style="width: 50px; height: 50Px">
+					</td>
+					<td scope="col"><%=b.getName() %></td>
+					<td scope="col"><%=b.getMatches()%></td>
+					<td scope="col"><%=b.getW() %></td> 
+					<td scope="col"><%=b.getD()%></td>
+					<td scope="col"><%=b.getL() %></td>
+					<td scope="col"><%=b.getScore() %></td>
+					<td scope="col"><%=b.getConceded() %></td>	
+					<td scope="col"><%=b.getNuof()%></td>
+					<td scope="col"><%=b.getP()%></td>
 				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>SC Freiburg</td>
-					<td>15</td>
-					<td>9</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>RB Leipzig</td>
-					<td></td>
-					<td></td>
-				</tr>
+				<%
+			}
+				%>
 			</tbody>
 		</table>
 </body>

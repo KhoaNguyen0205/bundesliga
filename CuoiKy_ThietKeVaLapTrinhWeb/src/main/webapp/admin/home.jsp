@@ -37,6 +37,7 @@ a.button.addClub{
 					<div class="card">
 						<div class="card-body text-center">
 							<br>
+							<i class="fa-regular fa-futbol fa-3x text-danger"></i>
 							<h4>Add CLUBS</h4>
 							-------------
 						</div>
@@ -49,6 +50,7 @@ a.button.addClub{
 					<div class="card">
 						<div class="card-body text-center">
 							<br>
+							<i class="fa-regular fa-futbol fa-3x text-danger"></i>
 							<h4>All CLUBS</h4>
 							-------------
 						</div>
@@ -61,6 +63,7 @@ a.button.addClub{
 					<div class="card">
 						<div class="card-body text-center">
 							<br>
+							<i class="fa-solid fa-person-running fa-3x text-primary"></i>
 							<h4>Add Player</h4>
 							-------------
 						</div>
@@ -73,6 +76,7 @@ a.button.addClub{
 					<div class="card">
 						<div class="card-body text-center">
 							<br>
+								<i class="fa-solid fa-person-running fa-3x text-primary"></i>
 							<h4>All Player</h4>
 							-------------
 						</div>
@@ -80,6 +84,32 @@ a.button.addClub{
 				</a>
 			</div>
 			
+			<div class="col-md-3">
+				<a href="add_matches.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<br>
+							<i class="fa-regular fa-calendar-days fa-3x"></i>
+							<h4>Add Matches</h4>
+							-------------
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			
+			<div class="col-md-3">
+				<a href="all_matches.jsp">
+					<div class="card">
+						<div class="card-body text-center">
+							<br>
+							<i class="fa-regular fa-calendar-days fa-3x"></i>
+							<h4>All Matches</h4>
+							-------------
+						</div>
+					</div>
+				</a>
+			</div>
 
 			
 			

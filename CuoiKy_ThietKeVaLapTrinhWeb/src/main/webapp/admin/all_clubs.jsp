@@ -33,7 +33,7 @@
 	</c:if>
 	
 	<table class="table table-striped ">
-		<thead class="bg-primary text-white">
+		<thead >
 			<tr>
 				<th scope="col">ID</th>
 				<th scope="col">Logo</th>
@@ -51,7 +51,10 @@
 				<td><img src="../AllClubs/<%=b.getLogo()%>"
 					style="width: 50px; height: 50Px"></td>
 				<td><%=b.getName()%></td>
-					
+					<td><a href="edit_club.jsp?id=<%=b.getId()%>"
+					class=" form-control mr-sm-2"><i class="fa-solid fa-pen-to-square"></i> Edit</a> <a
+					href="../delete?id=<%=b.getId()%>"
+					class=" form-control mr-sm-2"><i class="fa-solid fa-trash"></i> Delete</a></td>
 			</tr>
 			<%
 			}
